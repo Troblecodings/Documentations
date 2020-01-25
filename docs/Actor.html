@@ -50,37 +50,6 @@ vectors, before storing it into the command buffer as soon as possible
 into the according command buffer
 
 </details>
-<h3>Externs</h3>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;ActorProperties&gt; properties;</pre>
-    </summary>
-    Holds the properties for each actor
-
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; countData;</pre>
-    </summary>
-    Holds the count of indices of each actor
-
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; offsetData;</pre>
-    </summary>
-    Holds the index offset of each actor
-(Offset form the index buffers stating possition)
-
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt;  vertexOffsetData;</pre>
-    </summary>
-    Holds the offset of the vertices
-(This is the offset for the indices)
-
-</details>
 <h3>Structs</h3>
 <details>
     <summary>
@@ -135,6 +104,37 @@ uint32_t  indexCount;
 uint32_t* pIndices;
 uint16_t  vertexCount;
 uint8_t*  pVertices;</pre>
+</details>
+<h3>Externs</h3>
+<details>
+    <summary>
+        <pre class='prettyprint'>extern std::vector&lt;ActorProperties&gt; properties;</pre>
+    </summary>
+    Holds the properties for each actor
+
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; countData;</pre>
+    </summary>
+    Holds the count of indices of each actor
+
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; offsetData;</pre>
+    </summary>
+    Holds the index offset of each actor
+(Offset form the index buffers stating possition)
+
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt;  vertexOffsetData;</pre>
+    </summary>
+    Holds the offset of the vertices
+(This is the offset for the indices)
+
 </details>
 
     </div>
