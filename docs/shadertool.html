@@ -21,9 +21,9 @@
         <p><em>Note: The Shader Tool is currently under development and not yet finished</em></p>
         <p>
             The Shader Tool is a dotnet tool written in C#. This is mostly similar to a unix pipeline tool, unlike the
-            previous tools. Commands can be piped into it and the minimal output or the return codes can be used to tool
+            previous tools. Commands can be piped into it and the minimal output or the return codes can be used for tool
             chaining. It has a command interface for starting without parameters. There is no GUI available for the
-            tool, but this might change in the future.
+            tool, but this will change in the future.
         </p>
 
         <h2>Commands</h2>
@@ -94,6 +94,50 @@
                 </td>
                 <td class="cmd">
                     <p>Compiles shader and adds them to the shader data source/header files.</p>
+                </td>
+            </tr>
+        </table>
+        <h4>Map commands</h4>
+        
+        <table>
+            <tr>
+                <td class="cmd">
+                    <p><strong>map add &lt;mapName&gt; [actorNames, ... ]</strong>/p>
+                </td>
+                <td class="cmd">
+                    <p>Adds a map to the resource processing and generates the according json file</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="cmd">
+                    <p><strong>map rm &lt;mapName&gt;<br>map remove &lt;mapName&gt;</strong></p>
+                </td>
+                <td class="cmd">
+                    <p>Removes a map from the resource processing and deletes its according json file</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="cmd">
+                    <p><strong>map list</strong></p>
+                </td>
+                <td class="cmd">
+                    <p>Lists all maps added with the add command in the current location</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="cmd">
+                    <p><strong>map addactor &lt;mapName&gt; &lt;actorName&gt; [moreActorNames, ... ]<strong></p>
+                </td>
+                <td class="cmd">
+                    <p>This adds an actor to the maps json</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="cmd">
+                    <p><strong>map rmactor &lt;mapName&gt; &lt;actorName&gt; [moreActorNames, ... ] <br> map removeactor &lt;mapName&gt; &lt;actorName&gt; [moreActorNames, ... ]</strong></p>
+                </td>
+                <td class="cmd">
+                    <p>This removes an actor from the maps json</p>
                 </td>
             </tr>
         </table>
