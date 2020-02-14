@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>TGEngine Documentations</title>
+    <title>TGR Docs</title>
     <link rel="icon" href="logo.png" type="image/x-icon" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 <body>
 
-    <h1>TGEngine</h1>
+    <h1>TGR Docs</h1>
 
     <div class="menu">
         <a href="./index.html">Home</a>
@@ -18,16 +18,15 @@
     </div>
 
     <div class="container">
-        <h1>Documentation of the troble game resource (tgr) files</h1>
+        <h1>TGR files</h1>
         <h2>Version 1</h2>
-        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content blocks</p>
-        <p>Every block starts with a 32bit length of the following content after that follows the content</p>
-        <p>If it should follow a 0xFFFFFFFF after a block it will continue to the next content type. Content type order will be the following</p>
+        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content blocks 
+            Every block starts with a 32bit length of the following content after that follows the content 
+            If it should follow a the maximum 32bit number (0xFFFFFFFF) after a block it will continue to the next content type. Content type order will be the following</p>
         <ul>
             <li>Textures</li>
             <li>Materials</li>
             <li>Actors</li>
-            <li>Animations</li>
         </ul>
     </div>
 </body>
