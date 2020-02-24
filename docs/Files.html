@@ -37,7 +37,7 @@ Use "current_working_dir" to get the cwd after querying.
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>File open(char* name, char* mode);</pre>
+        <pre class='prettyprint'>File open(const char* name, const char* mode);</pre>
     </summary>
     Opens the file
 (In debug mode it checks if the open was successful)
@@ -45,7 +45,7 @@ Use "current_working_dir" to get the cwd after querying.
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>File readFileSize(char* name, char* mode, /*OUT*/ long* fileLength);</pre>
+        <pre class='prettyprint'>File readFileSize(const char* name, const char* mode, /*OUT*/ long* fileLength);</pre>
     </summary>
     Opens the file and gets the size of the file
 (In debug mode it checks if the open was successful)
@@ -54,7 +54,7 @@ Use "current_working_dir" to get the cwd after querying.
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>uint8_t* readAll(char* name);</pre>
+        <pre class='prettyprint'>uint8_t* readAll(const char* name);</pre>
     </summary>
     Reads all bytes of a file
 (In debug mode it checks if the open was successful)

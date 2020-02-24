@@ -27,7 +27,7 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>Map loadResourceFile(char* name);</pre>
+        <pre class='prettyprint'>void loadResourceFile(const char* name, Map* map);</pre>
     </summary>
     <!--COMMENT-->
 </details>
@@ -44,8 +44,9 @@
         <pre class='prettyprint'>Map</pre>
     </summary>
     <!--COMMENT-->
-    <pre class="prettyprint">tge::tex::Texture* textures;
-tge::gmc::Material* materials;</pre>
+    <pre class="prettyprint">std::vector<tge::tex::TextureInputInfo> textures;
+std::vector<tge::gmc::Material> materials;
+std::vector<tge::gmc::ActorInputInfo> actors;</pre>
 </details>
 
     </div>
