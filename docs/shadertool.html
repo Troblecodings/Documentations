@@ -194,12 +194,12 @@
                     <td class="cmd">
                         <p>
                             <strong>
-                                material add &lt;materialName&gt;
+                                material add &lt;materialName&gt; [texture name] [color (as hex number)]
                             </strong>
                         </p>
                     </td>
                     <td class="cmd">
-                        <p>Adds a material</p>
+                        <p>Adds a material, can be supplied with the materials texture name and it's color</p>
                     </td>
                 </tr>
                 <tr>
@@ -314,8 +314,7 @@
                     <td class="cmd">
                         <p>
                             <strong>
-                                map add &lt;mapName&gt; [actorNames, ...
-                                ]
+                                map add &lt;mapName&gt; [actorNames, ...]
                             </strong>
                         </p>
                     </td>
@@ -357,6 +356,18 @@
                     </td>
                     <td class="cmd">
                         <p>This adds an actor to the maps json</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
+                                map make &lt;mapName&gt;
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>This creates a resource file from the given map name (See TGR docs)</p>
                     </td>
                 </tr>
                 <tr>
