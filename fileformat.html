@@ -21,8 +21,8 @@
         <h1>TGR files</h1>
         <h2>Version 1</h2>
         <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content blocks 
-            Every block starts with a 32bit length of the following content after that follows the content 
-            If it should follow a the maximum 32bit number (0xFFFFFFFF) after a block it will continue to the next content type. Content type order will be the following</p>
+            Every block starts with a 32bit block header, this header can either be a block length or just additional information 
+            as well as UINT32_MAX (0xFFFFFFFF) which markes the content types end. This will change content type in the following order</p>
         <ul>
             <li>Textures</li>
             <li>Materials</li>
