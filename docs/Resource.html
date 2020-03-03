@@ -29,7 +29,11 @@
     <summary>
         <pre class='prettyprint'>void loadResourceFile(const char* name, Map* map);</pre>
     </summary>
-    <!--COMMENT-->
+    This loads a map from a resource file
+this needs to be a tgr file:
+https://troblecodings.com/fileformat.html
+it automatically creates all ressources
+
 </details>
 <h3>Macros</h3>
 <details>
@@ -44,9 +48,8 @@
         <pre class='prettyprint'>Map</pre>
     </summary>
     <!--COMMENT-->
-    <pre class="prettyprint">std::vector<tge::tex::TextureInputInfo> textures;
-std::vector<tge::gmc::Material> materials;
-std::vector<tge::gmc::ActorInputInfo> actors;</pre>
+    <pre class="prettyprint">    tge::tex::Sampler sampler;
+std::vector<tge::tex::Texture> textures;</pre>
 </details>
 
     </div>
