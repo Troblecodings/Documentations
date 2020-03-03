@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
+
 <head>
     <title>TGR Docs</title>
     <link rel="icon" href="logo.png" type="image/x-icon" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+
 <body>
 
     <h1>TGR Docs</h1>
@@ -20,14 +22,30 @@
     <div class="container">
         <h1>TGR files</h1>
         <h2>Version 1</h2>
-        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content blocks 
-            Every block starts with a 32bit length of the following content after that follows the content 
-            If it should follow a the maximum 32bit number (0xFFFFFFFF) after a block it will continue to the next content type. Content type order will be the following</p>
+        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content
+            blocks
+            Every block starts with a 32bit length of the following content after that follows the content
+            If it should follow a the maximum 32bit number (0xFFFFFFFF) after a block it will continue to the next
+            content type. Content type order will be the following.</p>
         <ul>
-            <li>Textures</li>
-            <li>Materials</li>
-            <li>Actors</li>
+            <li><strong>Textures</strong>
+                <p>The header is the size of the texture file in byte. The texture file is a standart PNG file.</p>
+            </li>
+            <li><strong>Materials</strong>
+                <p>The header is the size of the following Material in byte. Currently this should either be 20 or 24.
+                    The content consists of the <a href="./docs/Material.html">Material</a> data.</p>
+            </li>
+            <li><strong>Actors</strong>
+                <p>The header consists of the size of all the vertex data in the actor (<i>vertexCount</i> *
+                    <i>vertexStride</i>).
+                    The content starts with the properties of the <a href="./docs/Actor.html">Actor</a>. Following is
+                    the 4 byte <i>indexCount</i>, an other 4 byte for <i>vertexCount</i>,
+                    indexCount times 4 byte index values. Lastly the vertex data is appanded</p>
+            </li>
         </ul>
+        <p><strong>Note: All values are unchecked by the reader, it assumes that data is transfered and baked correctly,
+                this might change in further versions</strong></p>
     </div>
 </body>
+
 </html>
