@@ -22,9 +22,37 @@
     <div class="container">
         <h1>TGR files</h1>
         <h2>Version 1</h2>
-        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content blocks 
-            Every block starts with a 32bit block header, this header can either be a block length or just additional information 
-            as well as UINT32_MAX (0xFFFFFFFF) which markes the content types end. This will change content type in the following order</p>
+        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content
+            blocks
+            Every block starts with a 32bit block header, this header can either be a block length or just additional
+            information as well as UINT32_MAX (0xFFFFFFFF) which markes the content types end. This will change content
+            type in the following order</p>
+        <ul>
+            <li><strong>Textures</strong>
+                <p>The header is the size of the texture file in byte. The texture file is a standard PNG file.</p>
+            </li>
+            <li><strong>Materials</strong>
+                <p>The header is the size of the following Material in byte. Currently this should either be 20 or 24.
+                    The content consists of the <a href="./docs/Material.html">Material</a> data.</p>
+            </li>
+            <li><strong>Actors</strong>
+                <p>The header consists of the size of all the vertex data in the actor (<i>vertexCount</i> *
+                    <i>vertexStride</i>).
+                    The content starts with the properties of the <a href="./docs/Actor.html">Actor</a>. Following is
+                    the 4 byte <i>indexCount</i>, an other 4 byte for <i>vertexCount</i>,
+                    indexCount times 4 byte index values. Lastly the vertex data is appanded</p>
+            </li>
+        </ul>
+        <p><strong>Note: All values are unchecked by the reader, it assumes that data is transfered and baked correctly,
+                this might change in further versions</strong></p>
+
+        <h2>Version 2</h2>
+        <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content
+            blocks. Every block starts with a 32bit block header, this header can either be a block length or just
+            additional information as well as <strong>UINT32_MAX (0xFFFFFFFF)</strong> which markes the content types
+            end. Each content type starts with the <strong>32bit count</strong> of content blocks within this type.
+            Optional content types can be decleared empty with the count being zero followed by the content type end
+            marker. This will change content type in the following order:</p>
         <ul>
             <li><strong>Textures</strong>
                 <p>The header is the size of the texture file in byte. The texture file is a standart PNG file.</p>
@@ -41,8 +69,16 @@
                     indexCount times 4 byte index values. Lastly the vertex data is appanded</p>
             </li>
         </ul>
+        <h4>Optional</h4>
+        <ul>
+            <li><strong>Animation</strong></li>
+            <li><strong>Font</strong>
+                <p>The header is the size of the font file in byte. The font file is a standard true type font file.</p>
+            </li>
+        </ul>
         <p><strong>Note: All values are unchecked by the reader, it assumes that data is transfered and baked correctly,
                 this might change in further versions</strong></p>
+
     </div>
 </body>
 
