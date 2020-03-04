@@ -27,7 +27,7 @@
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern void(*playercontroller)(Input*);</pre>
+        <pre class='prettyprint'>extern void(*playercontroller)(Input);</pre>
     </summary>
     Function pointer to handle player inputs
 
@@ -41,10 +41,8 @@
 used to pass the input values platform 
 from the window to the player controller independently
 
-    <pre class="prettyprint">float x1;
-float y1;
-float x2;
-float y2;</pre>
+    <pre class="prettyprint">float inputX;
+float inputY;</pre>
 </details>
 
     </div>
