@@ -75,6 +75,11 @@
             <li><strong>Font</strong>
                 <p>The header is the size of the font file in byte. The font file is a standard true type font file.</p>
             </li>
+            <li><strong>UI Boundingboxes</strong>
+                <p>The header is reserved for further use and should be 0. The content consists of 8 times 32bit float
+                    values indicating 4 Points in a 2D plain, representing the actual Hitbox of a UI Actor. The
+                    coordintaes should be homogeneous within a range of -1 to 1</p>
+            </li>
         </ul>
         <p><strong>Note: All values are unchecked by the reader, it assumes that data is transfered and baked correctly,
                 this might change in further versions</strong></p>
