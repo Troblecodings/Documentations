@@ -54,7 +54,7 @@ Use "current_working_dir" to get the cwd after querying.
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>uint8_t* readAll(const char* name);</pre>
+        <pre class='prettyprint'>uint8_t* readAll(const char* name, long* size = nullptr);</pre>
     </summary>
     Reads all bytes of a file
 (In debug mode it checks if the open was successful)
