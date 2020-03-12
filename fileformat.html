@@ -48,7 +48,7 @@
                 this might change in further versions</strong></p>
 
         <h2>Version 2</h2>
-        <h4>Status: <strong style="color: orange;">RFC</strong></h4>
+        <h4>Status: <strong style="color: orange;">RFC 2 / beta implemented</strong></h4>
         <p>The file starts with <strong>a 32 bit version number</strong> as header. Following that are the content
             blocks. Every block starts with a 32bit block header, this header can either be a block length or just
             additional information as well as <strong>UINT32_MAX (0xFFFFFFFF)</strong> which markes the content types
@@ -73,18 +73,10 @@
         </ul>
         <h4>Optional</h4>
         <ul>
-            <li><strong>Animation</strong></li>
             <li><strong>Font</strong>
-                <p>The header is the size of the font file in byte. The font file is a standard true type font file.</p>
+                <p>The header is the size of the font file in byte. Following is the font height as 4byte float. The font file is a standard true type font file.</p>
             </li>
-            <li><strong>UI Boundingboxes</strong>
-                <p>The header is reserved for further use and should be 0. The content consists of 8 times 32bit float
-                    values indicating 4 Points in a 2D plain, representing the actual Hitbox of a UI Actor. The
-                    coordintaes should be homogeneous within a range of -1 to 1</p>
-            <li><strong>Sampler</strong>
-                <p>The header is reserverd for further use. The content consists of a
-                    <a href="./docs/Texturebuffer.html">SamplerInputInfo</a>.</p>
-            </li>
+            <li><strong>Animation</strong></li>
         </ul>
         <p><strong>Note: All values are unchecked by the reader, it assumes that data is transfered and baked correctly,
                 this might change in further versions</strong></p>
