@@ -185,6 +185,51 @@
             </tbody>
         </table>
 
+        <h4>Font commands</h4>
+        <p>Used to manage fonts</p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
+                                font add &lt;path&gt;
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>Adds a font and copies it to the resource folder</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
+                                font rm &lt;fontName&gt;<br>
+                                font remove &lt;fontName&gt;
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>Removes a font from the resource folder</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
+                                font list
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>Lists all fonts</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
         <h4>Material commands</h4>
         <p>Used to manage materials, with a maximum of 256 materials</p>
 
@@ -422,6 +467,18 @@
                     <td class="cmd">
                         <p>
                             <strong>
+                                map addfont &lt;mapName&gt; &lt;fontName&gt; &lt;fontSize&gt; [moreActorNames, ...]
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>This adds a font with a given size to the maps json</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
                                 map rmactor &lt;mapName&gt; &lt;actorName&gt; [moreActorNames, ... ] <br>
                                 map removeactor &lt;mapName&gt; &lt;actorName&gt; [moreActorNames, ... ]
                             </strong>
@@ -429,6 +486,19 @@
                     </td>
                     <td class="cmd">
                         <p>This removes an actor from the maps json</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cmd">
+                        <p>
+                            <strong>
+                                map rmfont &lt;mapName&gt; &lt;fontName&gt; [moreActorNames, ... ] <br>
+                                map removefont &lt;mapName&gt; &lt;fontName&gt; [moreActorNames, ... ]
+                            </strong>
+                        </p>
+                    </td>
+                    <td class="cmd">
+                        <p>This removes a font from the maps json</p>
                     </td>
                 </tr>
             </tbody>
