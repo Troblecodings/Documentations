@@ -27,13 +27,14 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void readFontfile(const char* name, const float fontheight, tge::tex::TextureInputInfo* textureInputInfo, stbtt_bakedchar* charData);</pre>
+        <pre class='prettyprint'>void createStringActor(const char* inputString, Font* font, tge::gmc::ActorInputInfo* actor);</pre>
     </summary>
     <!--COMMENT-->
 </details>
+<h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void createStringActor(const char* inputString, const stbtt_bakedchar* charData, tge::gmc::ActorInputInfo* actor);</pre>
+        <pre class='prettyprint'>extern Font* fonts;</pre>
     </summary>
     <!--COMMENT-->
 </details>
@@ -49,6 +50,16 @@
         <pre class='prettyprint'>#define STBTT_STATIC</pre>
     </summary>
     <!--COMMENT-->
+</details>
+<h3>Structs</h3>
+<details>
+    <summary>
+        <pre class='prettyprint'>Font</pre>
+    </summary>
+    <!--COMMENT-->
+    <pre class="prettyprint">uint32_t material;
+stbtt_bakedchar* charData;
+float fontheight; // Primarily for alignment</pre>
 </details>
 
     </div>

@@ -107,11 +107,13 @@ just break down to the statement given
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>#define TGE_CHECK_RECREATE else if(lastResult == VK_ERROR_OUT_OF_DATE_KHR){\
-if(tge::win::isMinimized){\
+        <pre class='prettyprint'>#define TGE_CHECK_RECREATE(statement) lastResult = statement;\
+if(lastResult == VK_ERROR_OUT_OF_DATE_KHR){\
+if(tge::win::isMinimized)\
 return;\
-}\
 recreateSwapchain();\
+} else if (lastResult != VK_SUCCESS) {\
+TGERROR(lastResult)\
 }</pre>
     </summary>
     <!--COMMENT-->
