@@ -33,7 +33,19 @@
 </details>
 <details>
     <summary>
+        <pre class='prettyprint'>void destroySampler(Sampler sampler);</pre>
+    </summary>
+    <!--COMMENT-->
+</details>
+<details>
+    <summary>
         <pre class='prettyprint'>void createTextures(TextureInputInfo* input, uint32_t size, Texture* output, uint32_t offset = 0);</pre>
+    </summary>
+    <!--COMMENT-->
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>void destroyTexture(Texture* texture, uint32_t size);</pre>
     </summary>
     <!--COMMENT-->
 </details>
@@ -82,8 +94,7 @@ VkFilter             filterMignification;</pre>
         <pre class='prettyprint'>Texture</pre>
     </summary>
     <!--COMMENT-->
-    <pre class="prettyprint">uint32_t       id;
-VkImage        image;
+    <pre class="prettyprint">VkImage        image;
 VkImageView    view;
 VkDeviceMemory imagememory;</pre>
 </details>
