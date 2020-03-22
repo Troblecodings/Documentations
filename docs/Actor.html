@@ -27,14 +27,6 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void createActor(ActorInputInfo* pInputInfo, uint32_t pSize);</pre>
-    </summary>
-    Creates the actors by loading everything into intermediate
-vectors, before storing it into the command buffer as soon as possible
-
-</details>
-<details>
-    <summary>
         <pre class='prettyprint'>void loadToCommandBuffer(VkCommandBuffer pBuffer, uint8_t pLayerId);</pre>
     </summary>
     Internal method which loads every actor
@@ -44,32 +36,16 @@ into the according command buffer
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern std::vector&lt;ActorProperties&gt; properties;</pre>
+        <pre class='prettyprint'>extern std::vector&lt;ActorProperties&gt; actorProperties;</pre>
     </summary>
     Holds the properties for each actor
 
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; countData;</pre>
+        <pre class='prettyprint'>extern std::vector&lt;ActorDescriptor&gt; actorDescriptor;</pre>
     </summary>
-    Holds the count of indices of each actor
-
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt; offsetData;</pre>
-    </summary>
-    Holds the index offset of each actor
-(Offset form the index buffers stating possition)
-
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>extern std::vector&lt;uint32_t&gt;  vertexOffsetData;</pre>
-    </summary>
-    Holds the offset of the vertices
-(This is the offset for the indices)
+    Holds the description of an actor
 
 </details>
 <h3>Structs</h3>
@@ -98,34 +74,12 @@ uint8_t   layer;</pre>
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>ActorInputInfo</pre>
+        <pre class='prettyprint'>ActorDescriptor</pre>
     </summary>
-    Holds all the information necessary
-for an actor to be drawn. Used with createActor.
-
-<ul>
-<li><strong class='atr'>pProperties</strong> describes the properties of this actor</li>
-<li><strong class='atr'>indexCount</strong> is the count of elements in pIndices</li>
-<li><strong class='atr'>pIndices</strong> is an array of indices</li>
-<li><strong class='atr'>vertexCount</strong> is the count of elements in pVertices</li>
-<li><strong class='atr'>pVertices</strong> is an array of vertices</li>
-<li><strong class='atr'>material</strong> is the id of the according material</li></ul>
-
-<h4>Valid usage</h4>
-<ul>
-<li><strong class='atr'>pProperties</strong> must be valid (see ActorProperties)</li>
-<li><strong class='atr'>indexCount</strong> needs to be greater than zero</li>
-<li><strong class='atr'>pIndices</strong> must be a valid pointer</li>
-<li><strong class='atr'>pIndices</strong> array must be at least the size of indexCount</li>
-<li><strong class='atr'>vertexCount</strong> needs to be greater than zero</li>
-<li><strong class='atr'>pVertices</strong> must be a valid pointer</li>
-<li><strong class='atr'>pVertices</strong> array must be at least the size of vertexCount</li>
-
-    <pre class="prettyprint">ActorProperties pProperties;
-uint32_t        indexCount;
-uint32_t*       pIndices;
-uint16_t        vertexCount;
-uint8_t*        pVertices;</pre>
+    <!--COMMENT-->
+    <pre class="prettyprint">uint32_t indexDrawCount;
+uint32_t indexOffset;
+uint32_t vertexOffset;</pre>
 </details>
 
     </div>
