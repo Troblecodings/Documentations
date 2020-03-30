@@ -27,14 +27,26 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void createStringActor(const char* inputString, Font* font, tge::gmc::ActorInputInfo* actor);</pre>
+        <pre class='prettyprint'>void createStringActor(Font* pFont, const char** pInputStrings, uint32_t size, glm::mat4* tranforms);</pre>
+    </summary>
+    <!--COMMENT-->
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>void destroyFontresources();</pre>
     </summary>
     <!--COMMENT-->
 </details>
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern Font* fonts;</pre>
+        <pre class='prettyprint'>extern std::vector&lt;tge::fnt::Font&gt; fonts;</pre>
+    </summary>
+    <!--COMMENT-->
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>extern std::vector&lt;tge::buf::BufferObject&gt; fontBufferObjects;</pre>
     </summary>
     <!--COMMENT-->
 </details>
