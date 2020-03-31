@@ -46,7 +46,7 @@
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern VkPipeline defaultPipeline;</pre>
+        <pre class='prettyprint'>extern VkPipeline defaultPipeline[PIPELINE_COUNT];</pre>
     </summary>
     <!--COMMENT-->
 </details>
@@ -56,13 +56,11 @@
         <pre class='prettyprint'>PipelineInputInfo</pre>
     </summary>
     <!--COMMENT-->
-    <pre class="prettyprint">ShaderPipe      pipe;
-uint32_t        stride;
-uint32_t        width;
-uint32_t        height;
-VkCullModeFlags cullMode;
-VkPolygonMode   polygonMode;
-float           lineWidth;</pre>
+    <pre class="prettyprint">ShaderPipe          pipe;
+CullMode            cullMode;
+PolygonMode         polygonMode;
+VertexInputBinding* inputBindings;
+uint32_t            inputBindingCount;</pre>
 </details>
 
     </div>
