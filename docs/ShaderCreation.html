@@ -22,30 +22,28 @@
         <a href="shadertool.html">Shader Tool</a>
     </div>
     <div class="container">
-        <pre class="prettyprint">Path: TGEngine/pipeline/ShaderCreation.hpp</pre>
+        <pre class="prettyprint">Path: TGEngine\pipeline\ShaderCreation.hpp</pre>
         <p>Click on a function or struct to reveal more information</p>
 <h3>Functions</h3>
 <details>
     <summary>
         <pre class='prettyprint'>VkPipelineShaderStageCreateInfo createShader(const unsigned char data[], VkShaderStageFlagBits flag, uint32_t size);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <h3>Structs</h3>
 <details>
     <summary>
         <pre class='prettyprint'>ShaderPipe</pre>
     </summary>
-    <!--COMMENT-->
-    <pre class="prettyprint">
-unsigned int layoutIndex;
+    
+    <pre class="prettyprint">unsigned int layoutIndex;
 VkPipelineShaderStageCreateInfo* shader;
 VkVertexInputAttributeDescription* inputs;
 VkDescriptorSetLayoutBinding* layouts;
 unsigned int shaderCount;
 unsigned int inputCount;
 unsigned int layoutCount;
-
 ShaderPipe() {}
 ShaderPipe(VkPipelineShaderStageCreateInfo* shader,
 VkVertexInputAttributeDescription* inputs,
@@ -53,7 +51,6 @@ const VkDescriptorSetLayoutBinding* layouts,
 const unsigned int shaderCount,
 const unsigned int inputCount,
 const unsigned int layoutCount);
-
 void precreation();</pre>
 </details>
 

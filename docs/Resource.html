@@ -22,8 +22,38 @@
         <a href="shadertool.html">Shader Tool</a>
     </div>
     <div class="container">
-        <pre class="prettyprint">Path: TGEngine/io/Resource.hpp</pre>
+        <pre class="prettyprint">Path: TGEngine\io\Resource.hpp</pre>
         <p>Click on a function or struct to reveal more information</p>
+<h3>Functions</h3>
+<details>
+    <summary>
+        <pre class='prettyprint'>void loadResourceFile(const char* name);</pre>
+    </summary>
+    This loads a map from a resource file<br>this needs to be a tgr file:<br>https://troblecodings.com/fileformat.html<br>it automatically creates all ressources<br>
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>void destroyResource();</pre>
+    </summary>
+    This will destroy all vulkan tide ressources of the map<br>
+</details>
+<h3>Externs</h3>
+<details>
+    <summary>
+        <pre class='prettyprint'>Map currentMap;</pre>
+    </summary>
+    
+</details>
+<h3>Structs</h3>
+<details>
+    <summary>
+        <pre class='prettyprint'>Map</pre>
+    </summary>
+    
+    <pre class="prettyprint">tge::tex::Sampler sampler;
+std::vector<tge::tex::Texture> textures;
+tge::buf::BufferObject mapBuffers[TGE_MAP_BUFFER_COUNT];</pre>
+</details>
 
     </div>
 </body>

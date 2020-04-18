@@ -22,59 +22,46 @@
         <a href="shadertool.html">Shader Tool</a>
     </div>
     <div class="container">
-        <pre class="prettyprint">Path: TGEngine/pipeline/buffer/Texturebuffer.hpp</pre>
+        <pre class="prettyprint">Path: TGEngine\pipeline\buffer\Texturebuffer.hpp</pre>
         <p>Click on a function or struct to reveal more information</p>
 <h3>Functions</h3>
 <details>
     <summary>
         <pre class='prettyprint'>void createSampler(SamplerInputInfo input, Sampler* sampler);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>void destroySampler(Sampler sampler);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>void createTextures(TextureInputInfo* input, uint32_t size, Texture* output, uint32_t offset = 0);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>void destroyTexture(Texture* texture, uint32_t size);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern TextureDefaults defaults;</pre>
+        <pre class='prettyprint'>TextureDefaults defaults;</pre>
     </summary>
-    <!--COMMENT-->
-</details>
-<h3>Macros</h3>
-<details>
-    <summary>
-        <pre class='prettyprint'>#define STB_IMAGE_IMPLEMENTATION</pre>
-    </summary>
-    <!--COMMENT-->
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>#define STB_IMAGE_STATIC</pre>
-    </summary>
-    <!--COMMENT-->
+    
 </details>
 <h3>Structs</h3>
 <details>
     <summary>
         <pre class='prettyprint'>TextureDefaults</pre>
     </summary>
-    <!--COMMENT-->
+    
     <pre class="prettyprint">VkSampler sampler;
 float     anisotropyFilter = 0;
 uint32_t  mipmapLevels = 1;</pre>
@@ -83,7 +70,7 @@ uint32_t  mipmapLevels = 1;</pre>
     <summary>
         <pre class='prettyprint'>SamplerInputInfo</pre>
     </summary>
-    <!--COMMENT-->
+    
     <pre class="prettyprint">VkSamplerAddressMode uSamplerMode;
 VkSamplerAddressMode vSamplerMode;
 VkFilter             filterMagnification;
@@ -93,7 +80,7 @@ VkFilter             filterMignification;</pre>
     <summary>
         <pre class='prettyprint'>Texture</pre>
     </summary>
-    <!--COMMENT-->
+    
     <pre class="prettyprint">VkImage        image;
 VkImageView    view;
 VkDeviceMemory imagememory;</pre>
@@ -102,7 +89,7 @@ VkDeviceMemory imagememory;</pre>
     <summary>
         <pre class='prettyprint'>TextureInputInfo</pre>
     </summary>
-    <!--COMMENT-->
+    
     <pre class="prettyprint">uint8_t*  data;
 int       x;
 int       y;

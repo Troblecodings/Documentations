@@ -22,53 +22,40 @@
         <a href="shadertool.html">Shader Tool</a>
     </div>
     <div class="container">
-        <pre class="prettyprint">Path: TGEngine/io/Font.hpp</pre>
+        <pre class="prettyprint">Path: TGEngine\io\Font.hpp</pre>
         <p>Click on a function or struct to reveal more information</p>
 <h3>Functions</h3>
 <details>
     <summary>
         <pre class='prettyprint'>void createStringActor(Font* pFont, const char** pInputStrings, uint32_t size, glm::mat4* tranforms);</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>void destroyFontresources();</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>extern std::vector&lt;tge::fnt::Font&gt; fonts;</pre>
+        <pre class='prettyprint'>std::vector&lt;tge::fnt::Font&gt; fonts;</pre>
     </summary>
-    <!--COMMENT-->
+    
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>extern std::vector&lt;tge::buf::BufferObject&gt; fontBufferObjects;</pre>
+        <pre class='prettyprint'>std::vector&lt;tge::buf::BufferObject&gt; fontBufferObjects;</pre>
     </summary>
-    <!--COMMENT-->
-</details>
-<h3>Macros</h3>
-<details>
-    <summary>
-        <pre class='prettyprint'>#define STB_TRUETYPE_IMPLEMENTATION</pre>
-    </summary>
-    <!--COMMENT-->
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>#define STBTT_STATIC</pre>
-    </summary>
-    <!--COMMENT-->
+    
 </details>
 <h3>Structs</h3>
 <details>
     <summary>
         <pre class='prettyprint'>Font</pre>
     </summary>
-    <!--COMMENT-->
+    
     <pre class="prettyprint">uint32_t material;
 stbtt_bakedchar* charData;
 float fontheight; // Primarily for alignment</pre>
