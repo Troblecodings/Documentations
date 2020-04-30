@@ -53,18 +53,27 @@
 <h3>Structs</h3>
 <details>
     <summary>
+        <pre class='prettyprint'>ActorTransform</pre>
+    </summary>
+    This struct holds all the transform information<br>used within a drawcall by this actor<br><br><ul><br><li><strong class='atr'>matrix</strong> is the transform information</li><br><li><strong class='atr'>animationIndex</strong> is the index of the material used to draw this mesh</li><br><li><strong class='atr'>transformIndex</strong> is the index of the object transform used to draw this mesh</li></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>matrix/strong> must be a valid matrix</li><br><li><strong class='atr'>animationIndex</strong> must be a valid material id in the material list</li><br><li><strong class='atr'>transformIndex</strong> must be a valid transform id in the transform list</li></ul><br>
+    <pre class="prettyprint">glm::fmat4 matrix;
+uint32_t   animationIndex;
+uint32_t   transformIndex;</pre>
+</details>
+<details>
+    <summary>
         <pre class='prettyprint'>ActorProperties</pre>
     </summary>
-    This is struct holds all the properties that<br>do not directly influence the mesh it self<br><br><ul><br><li><strong class='atr'>localTransform</strong> is the local tranform of the actor that will be computed at runtime</li><br><li><strong class='atr'>material</strong> is the index of the material used to draw this mesh</li><br><li><strong class='atr'>layer</strong> is the layer the actor is drawn on (e.g. 0 for normal world)</li></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>localTransform</strong> must be a non-zero matrix otherwise this actor will be ignored</li><br><li><strong class='atr'>material</strong> must be a valid material id in the material list</li><br><li><strong class='atr'>layer</strong> must be a valid layer id otherwise this actor will be ingnored</li></ul><br>
-    <pre class="prettyprint">glm::mat4 localTransform;
-uint32_t  material;
-uint32_t  layer;</pre>
+    This struct holds all the properties that<br>do not directly influence the mesh itself<br><br><ul><br><li><strong class='atr'>transform</strong> is the transform information</li><br><li><strong class='atr'>material</strong> is the index of the material used to draw this mesh</li><br><li><strong class='atr'>layer</strong> is the layer the actor is drawn on (e.g. 0 for normal world)</li></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>transform</strong> must be a valid ActorTransform struct</li><br><li><strong class='atr'>material</strong> must be a valid material id in the material list</li><br><li><strong class='atr'>layer</strong> must be a valid layer id, otherwise this actor will be ingnored</li></ul><br>
+    <pre class="prettyprint">ActorTransform transform;
+uint32_t       material;
+uint32_t       layer;</pre>
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>ActorDescriptor</pre>
     </summary>
-    This is struct holds all the information<br>needed to draw an actor such as offsets in the buffer<br>and index count<br><br><ul><br><li><strong class='atr'>indexDrawCount</strong> is the count of drawn indices</li><br><li><strong class='atr'>indexOffset</strong> is the first index to be drawn by this actor in the given map</li><br><li><strong class='atr'>vertexOffset</strong> is the first vertex the indices are describing</li></ul><br><li><strong class='atr'>instanceID</strong> is the id in the actorInstanceDescriptor array</li></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>indexDrawCount</strong> needs to be greater then 3</li><br><li><strong class='atr'>indexOffset</strong> needs to be smaller then the maximum index count of the map buffer</li><br><li><strong class='atr'>vertexOffset</strong> needs to be smaller then the maximum vertex count + current index</li></ul><br><li><strong class='atr'>instanceID</strong> must be a valid id in the actorInstanceDescriptor array or UINT32_MAX</li></ul><br>
+    This struct holds all the information<br>needed to draw an actor, such as offsets in the buffer<br>and index count<br><br><ul><br><li><strong class='atr'>indexDrawCount</strong> is the count of drawn indices</li><br><li><strong class='atr'>indexOffset</strong> is the first index to be drawn by this actor in the given map</li><br><li><strong class='atr'>vertexOffset</strong> is the first vertex the indices are describing</li><br><li><strong class='atr'>instanceID</strong> is the id in the actorInstanceDescriptor array</li></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>indexDrawCount</strong> needs to be greater then 3</li><br><li><strong class='atr'>indexOffset</strong> needs to be smaller then the maximum index count of the map buffer</li><br><li><strong class='atr'>vertexOffset</strong> needs to be smaller then the maximum vertex count + current index</li><br><li><strong class='atr'>instanceID</strong> must be a valid id in the actorInstanceDescriptor array or UINT32_MAX</li></ul><br>
     <pre class="prettyprint">uint32_t indexDrawCount;
 uint32_t indexOffset;
 uint32_t vertexOffset;
@@ -74,7 +83,7 @@ uint32_t instanceID;</pre>
     <summary>
         <pre class='prettyprint'>ActorInstanceDescriptor</pre>
     </summary>
-    This is struct holds all the information<br>needed to draw an instance of this actor<br><br><ul><br><li><strong class='atr'>instanceCount</strong> is the count of instances to be drawn</li><br><li><strong class='atr'>instanceOffset</strong> is the first instance to start with</li><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>instanceCount</strong> needs to be greater then 1</li><br><li><strong class='atr'>instanceOffset</strong> needs to be smaller then the maximum instance count of the map buffer</li><br>
+    This struct holds all the information<br>needed to draw an instance of this actor<br><br><ul><br><li><strong class='atr'>instanceCount</strong> is the count of instances to be drawn</li><br><li><strong class='atr'>instanceOffset</strong> is the first instance to start with</li><br></ul><br><br><h4>Valid usage</h4><br><ul><br><li><strong class='atr'>instanceCount</strong> needs to be greater then 1</li><br><li><strong class='atr'>instanceOffset</strong> needs to be smaller then the maximum instance count of the map buffer</li><br></ul><br>
     <pre class="prettyprint">uint32_t instanceCount;
 uint32_t instanceOffset;</pre>
 </details>
