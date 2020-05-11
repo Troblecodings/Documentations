@@ -27,13 +27,19 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void createStringActor(Font* pFont, const char** pInputStrings, uint32_t size, glm::mat4* tranforms);</pre>
+        <pre class='prettyprint'>const uint32_t createStringActor(const Font* pFont, const char** pInputStrings, const uint32_t size, const glm::mat4* tranforms);</pre>
     </summary>
     
 </details>
 <details>
     <summary>
         <pre class='prettyprint'>void destroyFontresources();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>void destroyStrings(const uint32_t destroy);</pre>
     </summary>
     
 </details>
