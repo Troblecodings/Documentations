@@ -27,7 +27,169 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>const uint32_t createStringActor(const Font* pFont, const char** pInputStrings, const uint32_t size, const glm::mat4* tranforms);</pre>
+        <pre class='prettyprint'>static_assert(isValid, "Only Strings and C-Strings allowed");</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const uint32_t cindex = fontBufferObjects.size();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>fontBufferObjects.resize(cglobalindex);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::gmc::actorProperties.reserve(reservesize);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::gmc::actorDescriptor.reserve(reservesize);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>properties.transform.matrix = glm::mat4(1);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>inputStringLength = pInputStrings[i].size();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>inputStringLength = (uint32_t)strlen(cstring);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::gmc::actorProperties.push_back(properties);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::gmc::actorDescriptor.push_back(descriptor);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const uint32_t vertexByteSize = vertexLength * 4 * sizeof(float);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const uint32_t indexByteSize = indexLength * sizeof(uint32_t);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::buf::createBuffers(bufferInfos, 4, bufferStorage);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>CHECKFAIL(vkMapMemory(device, bufferStorage[2].memory, 0, indexByteSize, 0, &indexMemory));</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>CHECKFAIL(vkMapMemory(device, bufferStorage[3].memory, 0, vertexByteSize, 0, &vertexMemory));</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const float FONT_MULTIPLIER = 1.0f / (0.6f * (float)tge::win::mainWindowHeight);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>cstring = pInputStrings[i].c_str();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const uint8_t* vert = (uint8_t*)vertexMemory + quadCount * 16u * sizeof(float);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>const uint8_t* indx = (uint8_t*)indexMemory + quadCount * 6u * sizeof(uint32_t);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::drw::genQuad(x1, y1, round_x, round_y, s1, t1, s0, t0, vert, indx, cquat * 4);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>vkUnmapMemory(device, bufferStorage[2].memory);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>vkUnmapMemory(device, bufferStorage[3].memory);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>startSingleTimeCommand();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>vkCmdCopyBuffer(SINGLE_TIME_COMMAND_BUFFER, bufferStorage[2].buffer, bufferStorage[0].buffer, 1, &indexBufferCopy);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>vkCmdCopyBuffer(SINGLE_TIME_COMMAND_BUFFER, bufferStorage[3].buffer, bufferStorage[1].buffer, 1, &vertexBufferCopy);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>endSingleTimeCommand();</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>tge::buf::destroyBuffers(bufferStorage + 2, 2);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>fontBufferObjects.erase(fontBufferObjects.end() - 2, fontBufferObjects.end());</pre>
     </summary>
     
 </details>

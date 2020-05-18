@@ -31,6 +31,30 @@
     </summary>
     
 </details>
+<details>
+    <summary>
+        <pre class='prettyprint'>void deleteBoundingBoxes(uint32_t start, uint32_t end);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>output[lastSize++] = drw::genMatrix(listInput.startX, listInput.startY, z, listInput.scalefactor, listInput.scalefactor);</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>boundingBoxes.push_back({ listInput.startX, listInput.startY, listInput.startX + listInput.width, listInput.startY + (listInput.heightOffset / 2) });</pre>
+    </summary>
+    
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>boundingBoxFunctions.push_back(function);</pre>
+    </summary>
+    
+</details>
 <h3>Externs</h3>
 <details>
     <summary>
@@ -40,7 +64,7 @@
 </details>
 <details>
     <summary>
-        <pre class='prettyprint'>std::vector&lt;void(*)(uint32_t)&gt; boundingBoxFunctions;</pre>
+        <pre class='prettyprint'>std::vector&lt;std::function&lt;void(uint32_t)&gt;&gt; boundingBoxFunctions;</pre>
     </summary>
     
 </details>
@@ -54,6 +78,18 @@
 float topLeftY;
 float bottomRightX;
 float bottomRightY;</pre>
+</details>
+<details>
+    <summary>
+        <pre class='prettyprint'>ListInputInfo</pre>
+    </summary>
+    
+    <pre class="prettyprint">float    scalefactor;
+float    heightOffset;
+float    startX;
+float    width;
+float    startY;
+uint32_t size;</pre>
 </details>
 
     </div>
