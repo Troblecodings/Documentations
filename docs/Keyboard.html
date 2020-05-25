@@ -27,20 +27,14 @@
 <h3>Functions</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>void __impl_key_update(uint16_t key, bool state);</pre>
+        <pre class='prettyprint'>void implKeyUpdate(uint16_t key, bool state);</pre>
     </summary>
     Internal keyinput handling method<br>
-</details>
-<details>
-    <summary>
-        <pre class='prettyprint'>void addKeyListener(void(*key_handle)(uint16_t, bool));</pre>
-    </summary>
-    A Listener, which is called every time a key input is detected, can be added with this method<br>
 </details>
 <h3>Externs</h3>
 <details>
     <summary>
-        <pre class='prettyprint'>std::vector&lt;void(*)(uint16_t, bool)&gt; keyboard_handler;</pre>
+        <pre class='prettyprint'>std::vector&lt;std::function&lt;void(uint16_t, bool)&gt;&gt; keyboardHandler;</pre>
     </summary>
     Internal keayboard handling list<br>
 </details>
